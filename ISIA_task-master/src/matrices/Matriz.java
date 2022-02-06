@@ -14,7 +14,7 @@ import java.util.Random;
  * @author galvez
  */
 public class Matriz {
-    private int[][]datos;
+    public int[][]datos;
     private Random rnd = new Random();
     
     public Matriz(int filas, int columnas, boolean inicializarAleatorio){
@@ -52,7 +52,6 @@ public class Matriz {
     public static Matriz traspuestaMatriz(Matriz a){
         int columnasA = a.getDimension().height;
         int filasA = a.getDimension().width;
-        System.out.println(filasA);
         Matriz matrizResultante = new Matriz(filasA,columnasA,false);
         for(int i = 0; i<filasA; i++){
             for(int j = 0; j<columnasA; j++){
@@ -70,7 +69,6 @@ public class Matriz {
         int columnasA = a.getDimension().height;
         int filasB = b.getDimension().width;
         Matriz matrizResultante = new Matriz(columnasB,filasA,false);
-        System.out.println(matrizResultante.getDimension());
         for (int i = 0; i<filasA; i++){
             for(int j= 0; j<columnasB; j++){
                 for(int k=0; k<columnasA; k++){
